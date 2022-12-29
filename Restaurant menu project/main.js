@@ -55,6 +55,39 @@ const menu = [
         img: 'https://images.unsplash.com/photo-1608897013039-887f21d8c804?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=692&q=80',
         description: 'It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.',
     },
+    {
+        id: 8,
+        title: 'Vegetable salad on black ceramic plate',
+        category: 'lunch',
+        price: 22.99,
+        img: 'https://images.unsplash.com/photo-1627309302198-09a50ae1b209?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80',
+        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam auctor faucibus varius. Praesent bibendum dictum auctor. Praesent metus massa, porttitor sit amet elit eu, commodo auctor risus. Nam sed dui odio. Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+    },
+    {
+        id: 9,
+        title: 'Cooked pork food on ceramic plate',
+        category: 'lunch',
+        price: 36.49,
+        img: 'https://images.unsplash.com/photo-1573225342350-16731dd9bf3d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1062&q=80',
+        description: 'Sed neque dui, faucibus non nunc ut, vestibulum vulputate ipsum. Aenean laoreet, mauris ut congue aliquet, lectus sem viverra ligula, quis dictum ante ipsum non augue. Morbi lacinia mauris tortor, sed commodo lectus aliquam quis. Praesent sit amet dui sit amet leo fermentum lobortis. Suspendisse potenti.',
+    },
+    {
+        id: 10,
+        title: 'Sliced cucumber on brown ceramic bowl',
+        category: 'lunch',
+        price: 29.90,
+        img: 'https://images.unsplash.com/photo-1584946425231-b6d6098a109c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80',
+        description: 'Curabitur scelerisque commodo est eget lacinia. Fusce ac lorem non ex maximus porttitor. In commodo lectus metus, et dictum eros feugiat id. Quisque eu lobortis velit, eget semper ex. Maecenas ligula nunc, semper eget turpis sit amet, ullamcorper pulvinar neque.',
+    },
+    {
+        id: 11,
+        title: 'Roasted ribs with sliced tomatoes and potatoes',
+        category: 'lunch',
+        price: 41.49,
+        img: 'https://images.unsplash.com/photo-1544025162-d76694265947?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1169&q=80',
+        description: 'Aenean ullamcorper quam diam, id bibendum enim egestas sed. Curabitur ut volutpat magna. Donec tincidunt lectus a nunc feugiat tincidunt. Curabitur vitae mauris non eros ultricies malesuada. Duis hendrerit sodales lacinia. Interdum et malesuada fames ac ante ipsum primis in faucibus. Sed dignissim sit amet lacus sed pharetra.'
+    }
+
 ];
 
 const sectionCenterEl = document.querySelector('.section-center');
