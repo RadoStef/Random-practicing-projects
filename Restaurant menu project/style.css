@@ -1,5 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100&family=Monda&display=swap');
 
+:root {
+    --color-gold: rgba(207, 149, 23, 0.911);
+    --color-light-grey: #f1f1f1;
+    --color-sea-blue: #4bbdff;  
+}
+
 * {
     padding: 0;
     margin: 0;
@@ -16,7 +22,59 @@ body {
     flex-direction: column;
 }
 
-.menu {
+header {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    height: 80px;
+    width: 100%;
+    background-color: var(--color-gold);
+}
+
+.logo {
+    position: absolute;
+    top: 0;
+    left: 20px;
+    border: 1px solid var(--color-gold);
+    border-top: none;
+    z-index: 10;
+    height: 111px;
+}
+
+ul {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    list-style: none;
+}
+
+li {
+    margin: 30px;
+}
+
+.social-media {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    background-color: var(--color-sea-blue);
+    width: 95%;
+    position: absolute;
+    top: 80px;
+    height: 40px;
+    border: 1px solid var(--color-gold);
+}
+
+.top-address {
+    color: var(--color-light-grey);
+    padding-right: 30px;
+}
+
+i {
+    padding: 0 10px;
+}
+
+.container {
     width: 70%;
     display: flex;
     justify-content: center;
@@ -30,12 +88,13 @@ body {
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    margin-top: 50px;
 }
 
 .underline {
     height: 3px;
     width: 5%;
-    background-color: rgba(207, 149, 23, 0.911);
+    background-color: var(--color-gold);
     margin: 20px 0;
 }
 
@@ -49,7 +108,7 @@ h2 {
     width: 400px;
     height: 280px;
     margin: 20px;
-    border: 3px solid  rgba(207, 149, 23, 0.911);
+    border: 3px solid  var(--color-gold);
     border-radius: 4px;
     box-shadow: 12px 8px 12px -2px rgba(0,0,0,0.16);
 }
@@ -57,13 +116,13 @@ h2 {
 .price {
     text-align: center;
     width: 120px;
-    color: rgba(207, 149, 23, 0.911);
+    color: var(--color-gold);
     padding: 10px;
-    border: 1px solid rgba(207, 149, 23, 0.911);
+    border: 1px solid var(--color-gold);
     border-radius: 5px;
 }
 
-header {
+.heading {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -82,14 +141,14 @@ header {
 }
 
 .menu-item {
-    border-bottom: 1px dotted rgba(207, 149, 23, 0.911);
+    border-bottom: 1px dotted var(--color-gold);
 }
 
 button {
     width: 120px;
-    color: rgba(207, 149, 23, 0.911);
+    color: var(--color-gold);
     padding: 15px;
-    border: 1px solid rgba(207, 149, 23, 0.911);
+    border: 1px solid var(--color-gold);
     border-radius: 5px;
     background-color: #f1f1f1;
     cursor: pointer;
@@ -103,8 +162,8 @@ button:hover {
 }
 
 .category-length {
-    color: rgba(207, 149, 23, 0.911);
-    margin: 10px;
+    color: var(--color-gold);
+    margin: 20px;
 }
 
 footer {
@@ -114,7 +173,7 @@ footer {
     justify-content: center;
     align-items: center;
     color: white;
-    background-color: rgba(207, 149, 23, 0.911);
+    background-color: var(--color-gold);
 }
 
 .section-center {

@@ -196,9 +196,8 @@ const menu = [
 const sectionCenterEl = document.querySelector('.section-center');
 const filterBtns = document.querySelectorAll('.filter-btn');
 const lengthEl = document.querySelector('.category-length');
-const footerEl = document.getElementById('footer');
 
-footerEl.textContent = `La lagune restaurant, Puerto Plata, Dominican Republic 2023.`
+
 
 // displaying menu items
 window.addEventListener('DOMContentLoaded', function() {
@@ -230,10 +229,10 @@ function displayMenuItems(menuItems) {
         return `<article class="menu-item">
         
         <div class='item-info'>
-            <header>
+            <div class='heading'>
               <h4>${item.title}</h4>
               <h4 class="price">$ ${item.price}</h4>  
-            </header>
+            </div class='heading'>
             <div class='product'>
               <img class="photo" src=${item.img}>
               <p class="item-text">${item.description}</p>
