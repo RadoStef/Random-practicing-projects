@@ -5,26 +5,38 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <script defer src="main.js"></script>
+    <script defer src="menu.js"></script>
     <title>Check out our restaurant menu.</title>
 </head>
 <body>
     <section class="menu">
         <!-- title -->
         <div class="title">
-            <h2> our menu</h2>
+            <h2> Our Menu</h2>
             <!-- fancy underline -->
             <div class="underline"></div>
         </div>
         <!-- filter buttons -->
+        <div class="btn-container">
+            <button class="filter-btn" type="button" data-id="all"> All </button>
+            <button class="filter-btn" type="button" data-id="breakfast"> Breakfast </button>
+            <button class="filter-btn" type="button" data-id="lunch"> Lunch </button>
+            <button class="filter-btn" type="button" data-id="dinner"> Dinner </button>
+            <button class="filter-btn" type="button" data-id="sweets"> Sweets </button>
+            <button class="filter-btn" type="button" data-id="drinks"> Drinks </button>
+            <button class="filter-btn" type="button" data-id="wines"> Wines </button>
+            <div class="category-length">
+            </div>
+        </div>
+        
         <!-- menu items -->
         <div class="section-center">
             <article class="menu-item">
                 <div class="item-info">
-                    <header>
+                    <div class="heading">
                       <h4></h4>
                       <h4 class="price"></h4>  
-                    </header>
+                    </heading>
                     <div class="product">
                       <img class="photo">
                       <p class="item-text"></p>   
@@ -33,6 +45,8 @@
             </article>
             <!-- end of single item -->
         </div>
+        
     </section>
+    <footer id="footer"></footer>
 </body>
 </html>

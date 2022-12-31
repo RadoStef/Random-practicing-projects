@@ -194,9 +194,34 @@ const menu = [
 ];
 
 const sectionCenterEl = document.querySelector('.section-center');
+const filterBtns = document.querySelectorAll('.filter-btn');
+const lengthEl = document.querySelector('.category-length');
+const footerEl = document.getElementById('footer');
 
+footerEl.textContent = `La lagune restaurant, Puerto Plata, Dominican Republic 2023.`
+
+// displaying menu items
 window.addEventListener('DOMContentLoaded', function() {
     displayMenuItems(menu);
+});
+
+// filtering items
+filterBtns.forEach(function(btn) {
+    btn.addEventListener('click', function(e) {
+        const category = e.currentTarget.dataset.id; 
+        const menuCategory = menu.filter(function(menuItem){
+            if(menuItem.category === category) {
+                return menuItem;
+            }
+        });
+            if(category === 'all') {
+                displayMenuItems(menu)
+                lengthEl.textContent = `${menu.length} products in the whole menu.`
+            } else {
+                displayMenuItems(menuCategory)
+                lengthEl.textContent = `${menuCategory.length} products in this category.`
+            } 
+    });
 });
 
 function displayMenuItems(menuItems) {
