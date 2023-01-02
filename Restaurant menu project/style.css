@@ -74,6 +74,10 @@ i {
     padding: 0 10px;
 }
 
+.welcome-section {
+    min-height: 100vh;
+}
+
 .container {
     width: 70%;
     display: flex;
@@ -157,6 +161,13 @@ button {
     margin: 10px;
 }
 
+.call-round {
+    padding: 10px;
+    border-radius: 50px;
+    height: 60px;
+    width: 60px;
+}
+
 button:hover {
     background-color: white;
 }
@@ -178,4 +189,9 @@ footer {
 
 .section-center {
     min-height: 70vh;
+}
+
+button, a {
+    color: var(--color-gold);
+    text-decoration: none;
 }

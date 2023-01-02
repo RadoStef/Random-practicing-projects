@@ -202,6 +202,10 @@ const lengthEl = document.querySelector('.category-length');
 // displaying menu items
 window.addEventListener('DOMContentLoaded', function() {
     displayMenuItems(menu);
+    const categories = menu.map((item) => {
+        return item.category;
+    });
+    console.log(categories);
 });
 
 // filtering items
