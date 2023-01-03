@@ -194,37 +194,13 @@ const menu = [
 ];
 
 const sectionCenterEl = document.querySelector('.section-center');
-const filterBtns = document.querySelectorAll('.filter-btn');
 const lengthEl = document.querySelector('.category-length');
-
-
+const buttonContainer = document.querySelector('.btn-container');
 
 // displaying menu items
 window.addEventListener('DOMContentLoaded', function() {
     displayMenuItems(menu);
-    const categories = menu.map((item) => {
-        return item.category;
-    });
-    console.log(categories);
-});
-
-// filtering items
-filterBtns.forEach(function(btn) {
-    btn.addEventListener('click', function(e) {
-        const category = e.currentTarget.dataset.id; 
-        const menuCategory = menu.filter(function(menuItem){
-            if(menuItem.category === category) {
-                return menuItem;
-            }
-        });
-            if(category === 'all') {
-                displayMenuItems(menu)
-                lengthEl.textContent = `${menu.length} products in the whole menu.`
-            } else {
-                displayMenuItems(menuCategory)
-                lengthEl.textContent = `${menuCategory.length} products in this category.`
-            } 
-    });
+    displayMenuButtons();
 });
 
 function displayMenuItems(menuItems) {
@@ -248,5 +224,38 @@ function displayMenuItems(menuItems) {
     sectionCenterEl.innerHTML = displayMenu;
 };
 
+function displayMenuButtons() {
+    // using reduce to get only the unique categories
+    const categories = menu.reduce((values, item) => {
+        if(!values.includes(item.category)) {
+            values.push(item.category);
+        }
+        return values;
+    }, ['all']);
+    // now mapping trough categories to display button for each category
+    const categoryBtns = categories.map((category) => {
+        return `<button class="filter-btn" type="button" data-id=${category}> ${category} </button>`
+    }).join('');
+    buttonContainer.innerHTML = categoryBtns;
 
-
+    // now we can get a uttons with its links
+    const filterBtns = document.querySelectorAll('.filter-btn');
+    // filtering items
+    filterBtns.forEach(function(btn) {
+        btn.addEventListener('click', function(e) {
+            const category = e.currentTarget.dataset.id; 
+            const menuCategory = menu.filter(function(menuItem){
+                if(menuItem.category === category) {
+                    return menuItem;
+                }
+            });
+                if(category === 'all') {
+                    displayMenuItems(menu)
+                    lengthEl.textContent = `${menu.length} products in the whole menu.`
+                } else {
+                    displayMenuItems(menuCategory)
+                    lengthEl.textContent = `${menuCategory.length} products in this category.`
+                } 
+        });
+    });
+};
